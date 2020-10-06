@@ -238,6 +238,7 @@ void gpio_delayed_button() {
 }
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
+    // NRF PIN脚 IRQ接收
     if (nrf_handle.nrf_init_ok && GPIO_Pin == GPIO_PIN_8) {
       nrf_irq_handle();
     }
