@@ -34,6 +34,12 @@ extern ADC_HandleTypeDef hadc1;
 
 /* USER CODE BEGIN Private defines */
 
+#define ADC_POWER_Pin					GPIO_PIN_2 // 
+#define RIGHT1_Pin                      GPIO_PIN_4 // 
+#define RIGHT2_Pin                      GPIO_PIN_5 // 
+#define LEFT1_Pin                       GPIO_PIN_6 // 
+#define LEFT2_Pin                       GPIO_PIN_7 // 
+
 /* USER CODE END Private defines */
 
 void MX_ADC1_Init(void);

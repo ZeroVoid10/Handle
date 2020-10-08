@@ -24,7 +24,7 @@ typedef union{
 
 按键布局
 
-```C
+``` C
     6                   0
 8       7           1       2
     9                   3
@@ -40,4 +40,21 @@ typedef union{
 
 CAN ID 324
 
-使用`msg_can.i16`读取, 范围-128~127.
+使用`can_msg.i16`读取, 范围-128~127.
+
+``` C
+/** 摇杆坐标系
+    ^ y          ^ y
+    |            |
+x<--         x<--
+*/
+#define RIGHT_Y 0 // 向前推 为正
+#define RIGHT_X 1 // 向左推 为正
+#define LEFT_Y  2 // 向前推 为正
+#define LEFT_X  3 // 向左推 为正
+
+// 读取实例
+can_msg msg;
+// 略去读取can接收数据
+int16_t right_x = msg.i16[RIGHT_X];
+```
